@@ -8,20 +8,20 @@ import java.time.LocalDateTime;
 public class Comment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //id yi 1 artırarak üretir
     private Long id;
 
     @Column(nullable = false, length = 500)
     private String content;
 
     @Column(name = "comment_date", nullable = false)
-    private LocalDateTime date;
+    private LocalDateTime date; //localdatetime şu anki tarih ve saati alır.
 
-    @Column(name = "username", nullable = false) // 'user' yerine 'username'
+    @Column(name = "username", nullable = false)
     private String username;
 
     @ManyToOne
-    @JoinColumn(name = "movie_id", nullable = false)
+    @JoinColumn(name = "movie_id", nullable = false) // nullable = false yaptık çünkü boş bırakılamaz
     private Movie movie;
 
     // Getters and Setters
