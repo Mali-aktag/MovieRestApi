@@ -13,5 +13,5 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
     List<Comment> findByMovieId(Long movieId);
 
     // Belirli bir kullanıcı tarafından yapılan tüm yorumları listeleme
-    List<Comment> findByUser(String user);
+    List<Comment> findByUsername(String username);
 }

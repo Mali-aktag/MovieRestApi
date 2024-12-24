@@ -13,8 +13,8 @@ public class Rating {
     @Column(nullable = false)
     private Integer score;
 
-    @Column(nullable = false)
-    private String user;
+    @Column(name = "username", nullable = false) // 'user' yerine 'username'
+    private String username;
 
     @ManyToOne
     @JoinColumn(name = "movie_id", nullable = false)
@@ -37,12 +37,12 @@ public class Rating {
         this.score = score;
     }
 
-    public String getUser() {
-        return user;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Movie getMovie() {

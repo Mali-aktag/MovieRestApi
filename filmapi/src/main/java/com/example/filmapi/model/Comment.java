@@ -17,8 +17,8 @@ public class Comment {
     @Column(name = "comment_date", nullable = false)
     private LocalDateTime date;
 
-    @Column(nullable = false)
-    private String user;
+    @Column(name = "username", nullable = false) // 'user' yerine 'username'
+    private String username;
 
     @ManyToOne
     @JoinColumn(name = "movie_id", nullable = false)
@@ -49,12 +49,12 @@ public class Comment {
         this.date = date;
     }
 
-    public String getUser() {
-        return user;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Movie getMovie() {

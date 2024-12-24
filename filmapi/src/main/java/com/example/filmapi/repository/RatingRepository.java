@@ -13,5 +13,5 @@ public interface RatingRepository extends JpaRepository<Rating, Long> {
     List<Rating> findByMovieId(Long movieId);
 
     // Belirli bir kullanıcı tarafından yapılan tüm puanlamaları listeleme
-    List<Rating> findByUser(String user);
+    List<Rating> findByUsername(String username);
 }
